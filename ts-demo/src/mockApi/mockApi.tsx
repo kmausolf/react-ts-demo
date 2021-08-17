@@ -1,10 +1,10 @@
-interface AccountSignUpRequest {
+export interface IAccountSignUpRequest {
   username: string;
   password: string;
   favoriteFood?: string;
 }
 
-interface IAccountDetails {
+export interface IAccountDetails {
   id: number;
   username: string;
   favoriteFood?: string;
@@ -33,7 +33,7 @@ const allUsers: IAccountDetails[] = [
 // Simulates successful account creation
 // Simply sends back what was sent with an ID added
 const createAccount = async (
-  request: AccountSignUpRequest
+  request: IAccountSignUpRequest
 ): Promise<AccountDetails> => {
     return new AccountDetails({
         id: 4,
@@ -46,4 +46,4 @@ const getAllUsers = async (): Promise<IAccountDetails[]> => {
   return allUsers;
 };
 
-export { createAccount, getAllUsers };
+export { createAccount, getAllUsers, AccountDetails };
