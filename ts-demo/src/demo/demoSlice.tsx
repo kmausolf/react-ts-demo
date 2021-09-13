@@ -20,3 +20,6 @@ export const demoSlice = createSlice({
     },
   },
 });
+
+export const { createAccount } = demoSlice.actions;
+export default demoSlice.reducer;
