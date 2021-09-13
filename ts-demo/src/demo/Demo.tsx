@@ -40,9 +40,19 @@ const Demo = () => {
     dispatch(createAccount({username, favoriteFood}))
   };
 
+  const greeting = () => {
+    if(account.username.length) {
+      return (
+        <h1>Hi, {account.username} how about some {account.favoriteFood}?</h1>
+      )
+    }
+  }
 
   return (
     <PrimaryContainer>
+      <div>
+        {greeting()}
+      </div>
       <InputContainer>
         <Label>Username</Label>
         <Input
