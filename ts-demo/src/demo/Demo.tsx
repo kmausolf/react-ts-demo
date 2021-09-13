@@ -1,11 +1,7 @@
 import React, { useState } from "react";
-import {
-  createAccount,
-  getAllUsers,
-  IAccountSignUpRequest,
-  IAccountDetails,
-} from "../mockApi/mockApi";
 import styled from "styled-components";
+import { useDispatch } from "react-redux";
+import { createAccount } from "./demoSlice";
 
 const PrimaryContainer = styled.div`
   background: #d4b4d6;
@@ -35,14 +31,12 @@ const Demo = () => {
   const [password, setPassword] = useState("");
   const [favoriteFood, setFavoriteFood] = useState("");
 
+  const dispatch = useDispatch();
+
   const handleSignUp = (): void => {
-    //do the sign up
+    dispatch(createAccount({username, favoriteFood}))
   };
 
-  // How do we type the return of this function?
-  // const getAllUsers = (): ??? => {
-  //     //get all users and return them
-  // }
 
   return (
     <PrimaryContainer>
