@@ -16,6 +16,7 @@ export const demoSlice = createSlice({
   reducers: {
     createAccount: (state, action: ICreateAccount) => {
       state.username = action.payload.username;
+      state.favoriteFood = action.payload.favoriteFood;
     },
   },
 });
