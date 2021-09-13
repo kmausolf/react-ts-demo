@@ -30,7 +30,7 @@ const Label = styled.label``;
 
 const Button = styled.button``;
 
-const Main = () => {
+const Demo = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [favoriteFood, setFavoriteFood] = useState("");
@@ -77,4 +77,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Demo;

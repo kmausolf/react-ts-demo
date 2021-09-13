@@ -1,11 +1,9 @@
-import React from 'react';
-import Main from './demo/Main';
-import './App.css';
+import React from "react";
+import Demo from "./demo/Demo";
+import "./App.css";
 
 function App() {
-  return (
-    <Main />
-  );
+  return <Demo />;
 }
 
 export default App;
