@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { useDispatch } from "react-redux";
+import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { createAccount } from "./demoSlice";
+
 
 const PrimaryContainer = styled.div`
   background: #d4b4d6;
@@ -31,7 +32,9 @@ const Demo = () => {
   const [password, setPassword] = useState("");
   const [favoriteFood, setFavoriteFood] = useState("");
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
+
+  const account = useAppSelector((state) => state.demo);
 
   const handleSignUp = (): void => {
     dispatch(createAccount({username, favoriteFood}))
